@@ -112,3 +112,36 @@ div.donation_methods .btn {
     border-radius: 10px;
     width: 100%;
 }
+
+@media only screen and (min-width: 600px) {
+
+    header {
+        flex-direction: row;
+        text-align: left;
+    }
+
+    header nav {
+        flex-direction: row;
+        width: auto;
+    }
+
+    header nav a {
+        display: inline-block;
+    }
+
+    #about img {
+        float: left;
+        margin: 0 1em 1em 0;
+        width: 16em;
+    }
+
+    .donation_methods {
+        display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+    gap: 1em;
+    }
+
+    .donation_methods .card {
+        max-width: 450px;
+    }
+}
