@@ -107,3 +107,8 @@ div.donation_methods .btn {
     background-image: url('../images/cash_app-dollar-full.svg');
 
 }
+
+#about img {
+    border-radius: 10px;
+    width: 100%;
+}
