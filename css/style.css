@@ -1,10 +1,21 @@
+:root {
+    --color-background: #e1e2e4;
+    --color-primary: #1a5632;
+    --color-secondary: #07090F;
+    --color-accent: #B4A169;
+}
+
 body {
     display: flex;
     flex-direction: column;
+    align-items: center;
     margin: 0;
     padding: 0;
 
     font-family: 'Roboto', sans-serif;
+
+    color:var(--color-secondary);
+    background-color: var(--color-background);
 }
 
 header {
@@ -13,16 +24,16 @@ header {
     align-items: center;
     align-content: center;
     text-align: center;
+    width: 100%;
     margin-inline: 2em;
 }
 
 header h1 {
-    margin-right: auto;
 }
 
 header nav {
     display: flex;
-    width: 100%;
+    width: 90%;
     flex-direction: column;
     gap: 1em;
 }
@@ -35,6 +46,11 @@ header nav a {
     text-decoration: none;
     text-transform: uppercase;
     font-weight: 600;
+    background-color: var(--color-primary);
+}
+
+header nav a.cta {
+    background-color: var(--color-accent);
 }
 
 main {
@@ -42,6 +58,11 @@ main {
     flex-direction: column;
     gap: 1em;
     margin-inline: 2em;
+}
+
+main h2 {
+    padding: .25em;
+    border-bottom: 4px solid var(--color-primary);
 }
 
 main p {
@@ -118,15 +139,27 @@ div.donation_methods .btn {
     header {
         flex-direction: row;
         text-align: left;
+        color: var(--color-background);
+        background-color: var(--color-primary);
+        }
+
+    header h1 {
+        margin-left: 2em;
+        margin-right: auto;
     }
 
     header nav {
         flex-direction: row;
+        margin-right: 2em;
         width: auto;
     }
 
     header nav a {
         display: inline-block;
+    }
+
+    header nav a:hover {
+        filter: brightness(1.2);
     }
 
     #about img {
@@ -143,5 +176,16 @@ div.donation_methods .btn {
 
     .donation_methods .card {
         max-width: 450px;
+    }
+
+    main {
+        max-width: 900px;
+
+    }
+
+    main h2 {
+        color:var(--color-background);
+        background-color: var(--color-primary);
+        border-bottom: 4px solid var(--color-accent);    
     }
 }
